@@ -18,11 +18,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <h5 className="text-2xl font-bold tracking-tight text-foreground">
           {project.companyName}
         </h5>
+        {project.deliveredVia && (
+          <p className="text-xs font-medium leading-relaxed text-muted-foreground">
+            Client Project — Lead &amp; Delivered via {project.deliveredVia}
+          </p>
+        )}
         <p className="line-clamp-3 font-normal text-muted-foreground flex-grow">
           {project.shortDescription}
         </p>
         <div className="flex gap-2 flex-wrap">
-          <ChipContainer textArr={project.category} />
+          <ChipContainer
+            textArr={[
+              ...project.category,
+              ...(project.techStack.includes("WordPress") ? ["WordPress"] : []),
+            ]}
+          />
         </div>
         {project.websiteLink && (
           <a

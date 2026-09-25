@@ -70,7 +70,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
               <span>{experience.location}</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+              <span className="inline-flex items-center py-1 text-xs font-semibold text-primary">
                 {getDurationText(experience.startDate, experience.endDate)}
               </span>
             </div>

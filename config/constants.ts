@@ -72,6 +72,7 @@ export type ValidSkills =
   | "Framer Motion";
 
 export type ValidCategory =
+  | "Drupal"
   | "Full Stack"
   | "Frontend"
   | "Backend"

@@ -15,6 +15,7 @@ export interface ProjectInterface {
   id: string;
   type: ValidExpType;
   companyName: string;
+  deliveredVia?: string;
   category: ValidCategory[];
   shortDescription: string;
   websiteLink?: string;
@@ -31,6 +32,7 @@ export interface ProjectInterface {
 export const Projects: ProjectInterface[] = [
   {
     id: "systems-limited",
+    deliveredVia: "JinnByte",
     companyName: "Systems Limited",
     type: "Professional",
     category: ["Web Dev", "Frontend"],
@@ -49,6 +51,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "atclose",
+    deliveredVia: "JinnByte",
     companyName: "AtClose",
     type: "Professional",
     category: ["Web Dev", "Frontend"],
@@ -67,9 +70,10 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "visionet",
+    deliveredVia: "JinnByte",
     companyName: "Visionet",
     type: "Professional",
-    category: ["Web Dev", "Frontend"],
+    category: ["Web Dev", "Frontend", "Drupal"],
     shortDescription:
       "Enterprise website for AI-driven retail solutions, delivered by JinnByte for Systems Limited. Built a responsive WordPress platform from Adobe XD designs and later rebuilt it on Drupal during platform migration and modernization.",
     techStack: ["WordPress", "Drupal 10", "HTML 5", "CSS 3"],
@@ -85,9 +89,10 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "partnerlinq",
+    deliveredVia: "JinnByte",
     companyName: "PartnerLinQ",
     type: "Professional",
-    category: ["Web Dev", "Frontend"],
+    category: ["Web Dev", "Frontend", "Drupal"],
     shortDescription:
       "Enterprise supply chain website delivered by JinnByte for Systems Limited. Built a responsive WordPress platform from Adobe XD designs and later rebuilt it on Drupal during platform migration and modernization.",
     techStack: ["WordPress", "Drupal 10", "HTML 5", "CSS 3"],
@@ -103,6 +108,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "evox",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/evox.jpg",
     imageKind: "illustration",
     companyName: "Evox",
@@ -121,6 +127,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "bss-school",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/bss-school.jpg",
     imageKind: "website",
     websiteLink: "https://www.beaconhouse.net",
@@ -140,6 +147,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "candyspoon",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/candyspoon-retail.jpg",
     imageKind: "illustration",
     companyName: "CandySpoon",
@@ -158,6 +166,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "merium-pervaiz",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/merium-pervaiz-clean.jpg",
     imageKind: "website",
     websiteLink: "https://meriumpervaiz.com",
@@ -177,6 +186,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "bss-lap",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/bss-lap.jpg",
     imageKind: "website",
     websiteLink: "https://lap.beaconhouse.net",
@@ -196,6 +206,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "impresario-studio",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/impresario-studio.jpg",
     imageKind: "illustration",
     companyName: "Impresario Studio",
@@ -214,6 +225,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "clc-online-learning",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/clc-online-learning.jpg",
     imageKind: "website",
     websiteLink: "https://clconlinelearning.co.uk",
@@ -233,6 +245,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "neumed",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/neumed.jpg",
     imageKind: "illustration",
     companyName: "NeuMed",
@@ -251,6 +264,7 @@ export const Projects: ProjectInterface[] = [
   },
   {
     id: "teeth-and-smile",
+    deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/teeth-and-smile.jpg",
     imageKind: "illustration",
     companyName: "Teeth & Smile",

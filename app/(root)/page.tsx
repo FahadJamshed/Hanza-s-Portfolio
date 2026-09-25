@@ -7,6 +7,7 @@ import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { Icons } from "@/components/common/icons";
+import { CareerStats } from "@/components/common/career-stats";
 import { SectionNav } from "@/components/common/section-nav";
 import { IndustriesSection } from "@/components/industries/industries-section";
 import { TypingText } from "@/components/common/typing-text";
@@ -127,6 +128,7 @@ export default function IndexPage() {
           </AnimatedText>
         </div>
       </section>
+      <CareerStats />
       <AnimatedSection
         direction="up"
         className="container my-14 space-y-6 overflow-hidden rounded-2xl border border-border/60 bg-muted/45 py-10"
@@ -208,6 +210,7 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
+        <IndustriesSection />
       <AnimatedSection
         direction="up"
         className="container my-14 space-y-6 overflow-hidden rounded-2xl border border-border/60 bg-muted/45 py-10"
@@ -237,7 +240,37 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
-        <IndustriesSection />
+        <section
+          aria-labelledby="hire-me-title"
+          className="container my-14 rounded-2xl bg-muted/45 px-5 py-10 text-foreground sm:px-8 sm:py-14 lg:px-10"
+        >
+          <div className="grid items-center gap-8 text-center xl:grid-cols-[minmax(0,1fr)_22rem] xl:gap-12 xl:text-left">
+            <div className="mx-auto w-full max-w-2xl space-y-4 xl:mx-0">
+              <h2
+                id="hire-me-title"
+                className="text-balance font-heading text-3xl leading-[1.15] tracking-tight sm:text-4xl md:text-5xl"
+              >
+                Let’s build your next great website.
+              </h2>
+            </div>
+            <div className="mx-auto grid w-full max-w-[24rem] grid-cols-2 gap-3 xl:max-w-none">
+              <Link
+                href="/contact"
+                className={cn(buttonVariants({ size: "lg" }), "h-14 w-full min-w-0 rounded-xl px-3 transition-transform hover:-translate-y-0.5 motion-reduce:transform-none sm:px-5")}
+              >
+                <Icons.contact className="mr-2 h-4 w-4" aria-hidden="true" />
+                Contact Me
+              </Link>
+              <Link
+                href="/resume"
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "h-14 w-full min-w-0 rounded-xl px-3 transition-transform hover:-translate-y-0.5 motion-reduce:transform-none sm:px-5")}
+              >
+                <Icons.post className="mr-2 h-4 w-4" aria-hidden="true" />
+                View Resume
+              </Link>
+            </div>
+          </div>
+        </section>
       </ClientPageWrapper>
     </>
   );

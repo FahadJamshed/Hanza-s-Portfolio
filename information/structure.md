@@ -1,7 +1,6 @@
 This is the folder structure of the whole application
 
 .
-├── README.md
 ├── app
 │ ├── (root)
 │ │ ├── contact

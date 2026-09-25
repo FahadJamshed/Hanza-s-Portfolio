@@ -17,6 +17,8 @@ const renderContent = (tabVal: string) => {
     projectArr = projectArr.filter((val) => val.type === "Personal");
   } else if (tabVal === "professional") {
     projectArr = projectArr.filter((val) => val.type === "Professional");
+  } else if (tabVal === "wordpress") {
+    projectArr = projectArr.filter((val) => val.techStack.includes("WordPress"));
   }
 
   return (
@@ -34,6 +36,11 @@ export default function ProjectsPage() {
       value: "all",
       label: "All",
       content: renderContent("all"),
+    },
+    {
+      value: "wordpress",
+      label: "WordPress",
+      content: renderContent("wordpress"),
     },
     {
       value: "personal",

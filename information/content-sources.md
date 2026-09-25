@@ -32,4 +32,4 @@ The user authorized related illustrative images for projects without available U
 
 Project previews fall back to an explicitly labelled graphic cover if an image fails to load.
 
-Set `NEXT_PUBLIC_SITE_URL` to the real portfolio deployment URL when available; it currently defaults to localhost. Google Analytics is optional. Contact links use the CV email, phone and LinkedIn directly. Original template blog posts are archived in `information/template-blogs/` and are not published.
+Set `NEXT_PUBLIC_SITE_URL` to the real portfolio deployment URL when available; it currently defaults to localhost. Google Analytics is optional. Contact links use the CV email, phone and LinkedIn directly.
