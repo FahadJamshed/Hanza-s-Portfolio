@@ -124,7 +124,11 @@ export default function IndexPage() {
             </AnimatedText>
           </div>
           <AnimatedText delay={1.2}>
-            <Icons.chevronDown className="mt-10 h-6 w-6 animate-bounce motion-reduce:animate-none" />
+            <Icons.arrowDown
+              aria-hidden="true"
+              strokeWidth={2.5}
+              className="mt-10 h-6 w-6 animate-bounce motion-reduce:animate-none"
+            />
           </AnimatedText>
         </div>
       </section>
