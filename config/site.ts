@@ -1,0 +1,32 @@
+export const siteConfig = {
+  name: "Hanza's Portfolio",
+  authorName: "Hanza Jamshed",
+  username: "hanzajamshed",
+  description:
+    "Senior WordPress Developer and Front-End Specialist with 6+ years of experience delivering enterprise-grade websites across e-commerce, healthcare, education and corporate sectors.",
+  email: "hanzajamshed@gmail.com",
+  phone: "+92 308 3013301",
+  location: "Lahore, Punjab, Pakistan",
+  jobTitle: "Senior Front-End Developer | WordPress Specialist",
+  resume: "/resume/Hanza_Jamshed_Resume_2026.pdf",
+  links: {
+    linkedin: "https://www.linkedin.com/in/hanzajamshed6188",
+    email: "mailto:hanzajamshed@gmail.com",
+  },
+  logo: "/branding/hanza-logo.png",
+  portrait: "/branding/hanza-portrait.png",
+  ogImage: "/branding/hanza-portrait.png",
+  iconDark: "/branding/hanza-logo-dark.png",
+  iconLight: "/branding/hanza-logo-light.png",
+  keywords: [
+    "Hanza Jamshed",
+    "WordPress Developer",
+    "Front-End Developer",
+    "WooCommerce",
+    "Drupal",
+    "PHP",
+    "Lahore",
+    "Custom WordPress Development",
+  ],
+  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+};
