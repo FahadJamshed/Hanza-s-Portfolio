@@ -23,7 +23,9 @@ import { featuredSkills } from "@/config/skills";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
+  title: {
+    absolute: "Hanza's Portfolio | Senior Front-End & WordPress Developer",
+  },
   description:
     "Hanza Jamshed — Senior Front-End Developer and WordPress Specialist in Lahore, Pakistan. Explore enterprise WordPress projects, experience and skills.",
   alternates: {
@@ -124,10 +126,9 @@ export default function IndexPage() {
             </AnimatedText>
           </div>
           <AnimatedText delay={1.2}>
-            <Icons.arrowDown
+            <Icons.scrollDown
               aria-hidden="true"
-              strokeWidth={2.5}
-              className="mt-10 h-6 w-6 animate-bounce motion-reduce:animate-none"
+              className="mt-10 h-10 w-6 animate-bounce text-gray-400 motion-reduce:animate-none"
             />
           </AnimatedText>
         </div>

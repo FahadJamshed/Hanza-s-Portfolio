@@ -1,6 +1,5 @@
 import {
   AlertTriangle,
-  ArrowDown,
   ArrowRight,
   BookMarked,
   Building,
@@ -90,7 +89,22 @@ export const Icons = {
   warning: AlertTriangle,
   user: User,
   arrowRight: ArrowRight,
-  arrowDown: ArrowDown,
+  scrollDown: (props: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="30 30 40 66"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M67.708 49.854C67.708 39.9935 59.7145 32 49.854 32C39.9935 32 32 39.9935 32 49.854V75.915C32 85.7755 39.9935 93.769 49.854 93.769C59.7145 93.769 67.708 85.7755 67.708 75.915V49.854Z" />
+      <path d="M49.927 45.8633V79.8243" />
+      <path d="M58.0591 71.7002L49.854 79.9062L41.649 71.7002" />
+    </svg>
+  ),
   help: HelpCircle,
   pizza: Pizza,
   sun: SunMedium,
