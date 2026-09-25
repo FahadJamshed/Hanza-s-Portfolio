@@ -1,3 +1,7 @@
+import {
+  GraduationCap,
+} from "lucide-react";
+
 import PageContainer from "@/components/common/page-container";
 
 export const metadata = {
@@ -18,6 +22,7 @@ const certifications = [
   ["Introduction to Project Management Certificate", "IBM", "August 2026"],
   ["PMP Certificate", "Pearson", "August 2026"],
 ];
+
 export default function EducationPage() {
   return (
     <PageContainer
@@ -28,7 +33,10 @@ export default function EducationPage() {
         <h2 className="font-heading text-2xl">Education</h2>
         <div className="grid gap-4 md:grid-cols-3">
           {education.map(([title, institution]) => (
-            <div key={title} className="glass-surface rounded-lg border p-6 space-y-2">
+            <div key={title} className="glass-surface rounded-lg border p-6 space-y-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border/70 bg-background/60 text-foreground">
+                <GraduationCap className="h-5 w-5" aria-hidden="true" />
+              </div>
               <h3 className="font-semibold">{title}</h3>
               <p className="text-muted-foreground">{institution}</p>
             </div>
@@ -38,16 +46,15 @@ export default function EducationPage() {
       <section className="space-y-5">
         <h2 className="font-heading text-2xl">Certifications</h2>
         <div className="grid gap-4 md:grid-cols-2">
-          {certifications.map(([title, issuer, date]) => (
-            <div
-              key={title + issuer}
-              className="glass-surface rounded-lg border p-6 space-y-2"
-            >
-              <h3 className="font-semibold">{title}</h3>
-              <p className="text-muted-foreground">{issuer}</p>
-              <p className="text-sm text-muted-foreground">Issued {date}</p>
-            </div>
-          ))}
+          {certifications.map(([title, issuer, date]) => {
+            return (
+              <div key={title + issuer} className="glass-surface rounded-lg border p-6 space-y-3">
+                <h3 className="font-semibold">{title}</h3>
+                <p className="text-muted-foreground">{issuer}</p>
+                <p className="text-sm text-muted-foreground">Issued {date}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
     </PageContainer>

@@ -10,6 +10,14 @@ export default function ContactPage() {
       title="Let’s work together"
       description="Get in touch about WordPress, WooCommerce and front-end development."
     >
+      <section className="glass-surface mb-6 rounded-xl border p-6 sm:p-8">
+        <h2 className="font-heading text-2xl sm:text-3xl">
+          Want to Start a Project? Let’s Discuss.
+        </h2>
+        <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">
+          Book a <strong className="text-foreground">30-minute consultation call for just $20</strong> and let’s discuss your project, goals, and requirements.
+        </p>
+      </section>
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="glass-surface rounded-lg border p-8 space-y-5">
           <h2 className="font-heading text-2xl">Hanza Jamshed</h2>
@@ -23,17 +31,19 @@ export default function ContactPage() {
           </a>
           <a
             className="block underline underline-offset-4"
-            href="tel:+923083013301"
-          >
-            {siteConfig.phone}
-          </a>
-          <a
-            className="block underline underline-offset-4"
             href={siteConfig.links.linkedin}
             target="_blank"
             rel="noopener noreferrer"
           >
             Connect on LinkedIn ↗
+          </a>
+          <a
+            className="block underline underline-offset-4"
+            href={siteConfig.links.fiverr}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hire me on Fiverr ↗
           </a>
         </div>
         <div className="glass-surface rounded-lg border p-8 space-y-5">

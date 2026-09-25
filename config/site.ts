@@ -11,6 +11,7 @@ export const siteConfig = {
   resume: "/resume/Hanza_Jamshed_Resume_2026.pdf",
   links: {
     linkedin: "https://www.linkedin.com/in/hanzajamshed6188",
+    fiverr: "https://www.fiverr.com/hanzajamshed/develop-awesome-websites-in-wordpress",
     email: "mailto:hanzajamshed@gmail.com",
   },
   logo: "/branding/hanza-logo.png",

@@ -65,9 +65,9 @@ export function MainNav({ items, children, mobileActions }: MainNavProps) {
               <Link
                 href={item.disabled ? "#" : item.href}
                 className={cn(
-                  "flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+                  "relative flex items-center text-lg font-medium transition-all duration-200 hover:-translate-y-0.5 hover:text-foreground sm:text-sm after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-current after:transition-transform after:duration-200 hover:after:scale-x-100",
                   item.href.startsWith(`/${segment}`)
-                    ? "text-foreground"
+                    ? "font-semibold text-foreground after:scale-x-100"
                     : "text-foreground/60",
                   item.disabled && "cursor-not-allowed opacity-80"
                 )}

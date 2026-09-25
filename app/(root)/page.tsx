@@ -7,6 +7,8 @@ import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { Icons } from "@/components/common/icons";
+import { IndustriesSection } from "@/components/industries/industries-section";
+import { TypingText } from "@/components/common/typing-text";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
 import SkillsCard from "@/components/skills/skills-card";
@@ -65,13 +67,10 @@ export default function IndexPage() {
           >
             Hanza Jamshed
           </AnimatedText>
-          <AnimatedText
-            as="h3"
-            delay={0.4}
+          <TypingText
             className="max-w-[22rem] font-heading text-base sm:max-w-none sm:text-xl md:text-xl lg:text-2xl"
-          >
-            Senior Front-End Developer | WordPress Specialist
-          </AnimatedText>
+            text="Senior Front-End Developer | WordPress Specialist"
+          />
           <div className="mt-3 max-w-[42rem] px-2 text-center sm:mt-4 sm:px-0">
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
               Senior WordPress Developer and Front-End Specialist with 6+ years
@@ -124,7 +123,7 @@ export default function IndexPage() {
       </section>
       <AnimatedSection
         direction="up"
-        className="container my-14 space-y-6 overflow-hidden rounded-2xl bg-muted py-10"
+        className="container my-14 space-y-6 overflow-hidden rounded-2xl border border-border/60 bg-muted/45 py-10"
         id="projects"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
@@ -205,7 +204,7 @@ export default function IndexPage() {
       </AnimatedSection>
       <AnimatedSection
         direction="up"
-        className="container my-14 space-y-6 overflow-hidden rounded-2xl bg-muted py-10"
+        className="container my-14 space-y-6 overflow-hidden rounded-2xl border border-border/60 bg-muted/45 py-10"
         id="skills"
       >
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
@@ -232,6 +231,7 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
+      <IndustriesSection />
     </ClientPageWrapper>
   );
 }

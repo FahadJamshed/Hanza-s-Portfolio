@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 
 import { Analytics } from "@/components/common/analytics";
 import { AnimatedCursor } from "@/components/common/animated-cursor";
+import { FloatingHireButton } from "@/components/common/floating-hire-button";
 import { PageLoader } from "@/components/common/page-loader";
 import { ThemeProvider } from "@/components/common/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
@@ -125,6 +126,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <PageLoader />
           <AnimatedCursor />
+          <FloatingHireButton />
           <Analytics />
           <Toaster />
           <ModalProvider />
