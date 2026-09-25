@@ -13,7 +13,7 @@ export const routesConfig = {
       href: "/skills",
     },
     {
-      title: "Education",
+      title: "Education & Certifications",
       href: "/education",
     },
     {

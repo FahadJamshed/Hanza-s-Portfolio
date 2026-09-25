@@ -7,6 +7,7 @@ import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { Icons } from "@/components/common/icons";
+import { SectionNav } from "@/components/common/section-nav";
 import { IndustriesSection } from "@/components/industries/industries-section";
 import { TypingText } from "@/components/common/typing-text";
 import ExperienceCard from "@/components/experience/experience-card";
@@ -42,14 +43,19 @@ export default function IndexPage() {
   };
 
   return (
-    <ClientPageWrapper>
-      <Script
-        id="schema-person"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
+    <>
+      <SectionNav />
+      <ClientPageWrapper>
+        <Script
+          id="schema-person"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
 
-      <section className="mb-0 flex min-h-[calc(100svh-5rem)] items-center py-8 sm:py-10 md:py-16">
+      <section
+        id="home"
+        className="mb-0 flex min-h-[calc(100svh-5rem)] items-center py-8 sm:py-10 md:py-16"
+      >
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 px-4 text-center sm:px-6">
           <Image
             src={siteConfig.portrait}
@@ -69,7 +75,7 @@ export default function IndexPage() {
           </AnimatedText>
           <TypingText
             className="max-w-[22rem] font-heading text-base sm:max-w-none sm:text-xl md:text-xl lg:text-2xl"
-            text="Senior Front-End Developer | WordPress Specialist"
+            text={"Senior Front-End Developer\u00a0\u00a0|\u00a0\u00a0WordPress Specialist"}
           />
           <div className="mt-3 max-w-[42rem] px-2 text-center sm:mt-4 sm:px-0">
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -231,7 +237,8 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
-      <IndustriesSection />
-    </ClientPageWrapper>
+        <IndustriesSection />
+      </ClientPageWrapper>
+    </>
   );
 }

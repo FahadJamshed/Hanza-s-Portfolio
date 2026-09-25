@@ -17,12 +17,12 @@ import {
   Laptop,
   Loader2,
   LucideProps,
+  Mail,
   Menu,
   Moon,
   MoreVertical,
   Music,
   Palette,
-  Phone,
   Pizza,
   Plus,
   Scroll,
@@ -70,7 +70,7 @@ import {
 } from "react-icons/si";
 
 export const Icons = {
-  contact: Phone,
+  contact: Mail,
   gitRepoIcon: BookMarked,
   gitOrgBuilding: Building,
   gitBranch: IoIosGitBranch,
