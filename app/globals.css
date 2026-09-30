@@ -302,11 +302,11 @@
     margin-left: -15px;
     margin-top: -15px;
     transition:
-      width 180ms ease,
-      height 180ms ease,
-      margin 180ms ease,
-      background-color 180ms ease,
-      border-color 180ms ease;
+      width 90ms ease,
+      height 90ms ease,
+      margin 90ms ease,
+      background-color 90ms ease,
+      border-color 90ms ease;
   }
 
   .cursor-ring-active {
