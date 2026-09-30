@@ -13,6 +13,7 @@ interface DescriptionDetailsInterface {
 
 export interface ProjectInterface {
   id: string;
+  hidden?: boolean;
   type: ValidExpType;
   companyName: string;
   deliveredVia?: string;
@@ -29,9 +30,10 @@ export interface ProjectInterface {
   pagesInfoArr: PagesInfoInterface[];
 }
 
-export const Projects: ProjectInterface[] = [
+const allProjects: ProjectInterface[] = [
   {
     id: "systems-limited",
+    hidden: true,
     deliveredVia: "JinnByte",
     companyName: "Systems Limited",
     type: "Professional",
@@ -282,4 +284,5 @@ export const Projects: ProjectInterface[] = [
     pagesInfoArr: [],
   },
 ];
+export const Projects = allProjects.filter((project) => !project.hidden);
 export const featuredProjects = Projects.slice(0, 3);
