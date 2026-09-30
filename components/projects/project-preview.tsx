@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Building2, GraduationCap, HeartPulse, ShoppingBag, AudioLines, Globe2 } from "lucide-react";
+import { Building2, GraduationCap, HeartPulse, ShoppingBag, AudioLines, Globe2, UtensilsCrossed } from "lucide-react";
 
 const covers = {
+  "khan-baba": { icon: UtensilsCrossed, label: "Restaurant & catering", color: "from-amber-950 to-orange-900" },
   evox: { icon: Building2, label: "Enterprise website", color: "from-indigo-950 to-slate-800" },
   candyspoon: { icon: ShoppingBag, label: "WooCommerce storefront", color: "from-rose-950 to-pink-800" },
   "impresario-studio": { icon: AudioLines, label: "Podcasts & audio", color: "from-violet-950 to-purple-800" },

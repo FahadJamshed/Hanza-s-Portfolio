@@ -32,6 +32,25 @@ export interface ProjectInterface {
 
 const allProjects: ProjectInterface[] = [
   {
+    id: "khan-baba",
+    deliveredVia: "JinnByte",
+    companyName: "Khan Baba",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "WordPress website for Khan Baba Restaurant, showcasing Pakistani cuisine, catering services and event booking with animated sections and customer testimonials.",
+    websiteLink: "https://khanbaba.jinnbyte-staging.com/",
+    techStack: ["WordPress", "Elementor Pro", "Javascript", "CSS 3"],
+    descriptionDetails: {
+      paragraphs: [
+        "A WordPress and Elementor website for Khan Baba Restaurant, presenting the brand’s culinary heritage, restaurant menu and catering services for weddings, corporate gatherings and private events.",
+        "The website brings together dedicated restaurant and catering pages, animated content sections, customer testimonials and clear contact and event-booking calls to action.",
+      ],
+      bullets: [],
+    },
+    pagesInfoArr: [],
+  },
+  {
     id: "systems-limited",
     hidden: true,
     deliveredVia: "JinnByte",
@@ -284,5 +303,14 @@ const allProjects: ProjectInterface[] = [
     pagesInfoArr: [],
   },
 ];
-export const Projects = allProjects.filter((project) => !project.hidden);
+// Keep these projects first even when new entries are added above them.
+const pinnedProjectIds = ["atclose", "visionet", "partnerlinq"];
+const projectPriority = (id: string) => {
+  const index = pinnedProjectIds.indexOf(id);
+  return index === -1 ? pinnedProjectIds.length : index;
+};
+
+export const Projects = allProjects
+  .filter((project) => !project.hidden)
+  .sort((a, b) => projectPriority(a.id) - projectPriority(b.id));
 export const featuredProjects = Projects.slice(0, 3);
