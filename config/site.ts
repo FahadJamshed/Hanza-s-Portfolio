@@ -12,11 +12,12 @@ export const siteConfig = {
   links: {
     linkedin: "https://www.linkedin.com/in/hanzajamshed6188",
     fiverr: "https://www.fiverr.com/hanzajamshed/develop-awesome-websites-in-wordpress",
+    upwork: "https://www.upwork.com/freelancers/~01179033372965234b?mp_source=share",
     email: "mailto:hanzajamshed@gmail.com",
   },
   logo: "/branding/hanza-logo.png",
   portrait: "/branding/hanza-portrait.png",
-  ogImage: "/branding/hanza-portrait.png",
+  ogImage: "/branding/hanza-social-preview.png",
   iconDark: "/branding/hanza-logo-dark.png",
   iconLight: "/branding/hanza-logo-light.png",
   keywords: [

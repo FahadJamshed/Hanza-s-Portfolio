@@ -45,6 +45,14 @@ export default function ContactPage() {
           >
             Hire me on Fiverr ↗
           </a>
+          <a
+            className="block underline underline-offset-4"
+            href={siteConfig.links.upwork}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hire me on Upwork ↗
+          </a>
         </div>
         <div className="glass-surface rounded-lg border p-8 space-y-5">
           <h2 className="font-heading text-2xl">From design to deployment</h2>
@@ -60,7 +68,7 @@ export default function ContactPage() {
             Email Hanza
           </a>
           <a
-            className="block underline underline-offset-4"
+            className="ml-3 inline-flex w-fit items-center justify-center rounded-md border border-primary px-5 py-3 font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             href={siteConfig.resume}
             download
           >
