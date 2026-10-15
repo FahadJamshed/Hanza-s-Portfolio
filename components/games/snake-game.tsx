@@ -208,11 +208,11 @@ export default function SnakeGame() {
         {status !== "running" && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-background/90 px-5 text-center backdrop-blur-sm sm:px-8">
             <p className="font-heading text-2xl sm:text-3xl">{status === "over" ? "Game over" : "Ready when you are"}</p>
-              <p className="mt-2 max-w-xs text-sm text-muted-foreground">
-              {status === "over" ? `You scored ${game.score}. Fancy another round?` : status === "paused" ? "Take a breather. Resume when you are ready." : "Tap start, then use the direction pad below to play."}
+            <p className="mt-2 max-w-xs text-sm text-muted-foreground">
+              {status === "over" ? `You scored ${game.score}. Fancy another round?` : "Tap start, then use the direction pad below to play."}
             </p>
             <button type="button" onClick={start} className="mt-5 min-h-12 min-w-40 rounded-xl bg-primary px-6 py-3 font-bold text-primary-foreground shadow-md transition duration-200 hover:-translate-y-0.5 hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2">
-              {status === "over" ? "Play again" : status === "paused" ? "Resume game" : "Start game"}
+              {status === "over" ? "Play again" : "Start game"}
             </button>
           </div>
         )}
@@ -225,16 +225,7 @@ export default function SnakeGame() {
           <DirectionButton label="Up" direction="up" onTurn={turn}>↑</DirectionButton>
           <span />
           <DirectionButton label="Left" direction="left" onTurn={turn}>←</DirectionButton>
-          <button
-            type="button"
-            aria-label={status === "running" ? "Pause game" : status === "paused" ? "Resume game" : "Pause control unavailable"}
-            title={status === "running" ? "Pause game" : status === "paused" ? "Resume game" : "Start the game first"}
-            disabled={status !== "running" && status !== "paused"}
-            onClick={() => setStatus(status === "running" ? "paused" : "running")}
-            className="grid h-14 w-16 touch-manipulation place-items-center rounded-2xl border border-border/80 bg-background/80 text-lg font-bold shadow-sm transition duration-150 hover:border-primary/40 hover:bg-primary/5 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:h-12 sm:w-14 sm:rounded-xl"
-          >
-            {status === "paused" ? "▶" : "Ⅱ"}
-          </button>
+          <span />
           <DirectionButton label="Right" direction="right" onTurn={turn}>→</DirectionButton>
           <span />
           <DirectionButton label="Down" direction="down" onTurn={turn}>↓</DirectionButton>

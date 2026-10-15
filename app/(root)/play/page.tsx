@@ -15,7 +15,7 @@ export default function PlayPage() {
   return (
     <PageContainer
       title="Game Zone"
-      description="Take a little break with two classic arcade games."
+      description="Take a little break with a classic arcade game."
     >
       <GameHub />
     </PageContainer>
