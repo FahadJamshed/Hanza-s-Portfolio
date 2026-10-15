@@ -302,6 +302,24 @@ const allProjects: ProjectInterface[] = [
     },
     pagesInfoArr: [],
   },
+  {
+    id: "manchester-corporate-travel",
+    companyName: "Manchester Corporate Travel",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "Corporate chauffeur travel website presenting airport transfers, executive and event services, a luxury vehicle fleet, and online booking options.",
+    websiteLink: "https://manchestercorporatetravel.com/",
+    techStack: ["WordPress"],
+    descriptionDetails: {
+      paragraphs: [
+        "A corporate chauffeur travel website built to introduce Manchester Corporate Travel’s airport, business, event and hourly chauffeur services.",
+        "The site brings together fleet information, travel service details and booking calls to action, helping visitors explore vehicle options and arrange a journey.",
+      ],
+      bullets: [],
+    },
+    pagesInfoArr: [],
+  },
 ];
 // Keep these projects first even when new entries are added above them.
 const pinnedProjectIds = ["atclose", "visionet", "partnerlinq"];
