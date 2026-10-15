@@ -179,7 +179,7 @@ export default function SnakeGame() {
       </div>
 
       <div
-        className="relative mx-auto aspect-square w-full max-w-[min(78vw,680px)] touch-none overflow-hidden rounded-2xl border border-border bg-background p-1.5 shadow-inner sm:p-3 lg:mx-0 lg:max-w-[min(62vw,680px)]"
+        className="relative mx-auto aspect-square w-full max-w-[min(78vw,680px)] overflow-hidden rounded-2xl border border-border bg-background p-1.5 shadow-inner sm:p-3 lg:mx-0 lg:max-w-[min(62vw,680px)]"
         role="img"
         aria-label={`Game board. Score ${game.score}${status === "over" ? ". Game over." : ""}`}
       >
