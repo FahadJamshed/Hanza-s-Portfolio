@@ -17,12 +17,12 @@ export const routesConfig = {
       href: "/education",
     },
     {
-      title: "Contact",
-      href: "/contact",
-    },
-    {
       title: "Take a Break",
       href: "/play",
+    },
+    {
+      title: "Contact Info",
+      href: "/contact",
     },
   ],
 };
