@@ -21,7 +21,7 @@ export const routesConfig = {
       href: "/contact",
     },
     {
-      title: "Game Zone",
+      title: "Take a Break",
       href: "/play",
     },
   ],

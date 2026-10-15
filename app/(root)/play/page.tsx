@@ -5,7 +5,7 @@ import PageContainer from "@/components/common/page-container";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Game Zone",
+  title: "Take a Break",
   description:
     "Take a quick break and play Snake, a classic arcade game by Hanza Jamshed.",
   alternates: { canonical: `${siteConfig.url}/play` },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function PlayPage() {
   return (
     <PageContainer
-      title="Game Zone"
+      title="Take a Break"
       description="Take a little break with a classic arcade game."
     >
       <GameHub />
