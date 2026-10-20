@@ -16,9 +16,9 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
           <div className="home-announcement-track">
             {[0, 1, 2, 3].map((copy) => (
               <p className="home-announcement-message" key={copy} aria-hidden={copy > 0}>
-                Looking for a modern, high-converting website that boosts your brand and ranks higher on Google? Let’s discuss your idea.
+                Looking for a modern, SEO-friendly, lightning-fast WordPress website with easy content management? Let’s turn your idea into a high-performing digital experience.
                 <Link href="/contact" className="home-announcement-link">
-                  Let’s talk <span aria-hidden="true">↗</span>
+                  Let&apos;s Discuss Your Project <span aria-hidden="true">↗</span>
                 </Link>
                 <span className="home-announcement-spacer" aria-hidden="true" />
               </p>
