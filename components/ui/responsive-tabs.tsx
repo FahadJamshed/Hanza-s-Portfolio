@@ -67,17 +67,17 @@ export function ResponsiveTabs({
       <div className="hidden md:block">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList
-            className="grid w-full"
+            className="experience-tabs grid w-full h-auto p-1.5 rounded-xl bg-muted/60 border border-border/60"
             style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}
           >
             {items.map((item) => (
-              <TabsTrigger key={item.value} value={item.value}>
+              <TabsTrigger key={item.value} value={item.value} className="experience-tab-trigger rounded-lg py-2.5 text-sm font-medium text-muted-foreground data-[state=active]:text-foreground data-[state=active]:shadow-sm">
                 {item.label}
               </TabsTrigger>
             ))}
           </TabsList>
           {items.map((item) => (
-            <TabsContent key={item.value} value={item.value}>
+            <TabsContent key={item.value} value={item.value} className="mt-8 focus-visible:outline-none">
               {item.content}
             </TabsContent>
           ))}

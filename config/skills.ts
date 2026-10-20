@@ -31,6 +31,12 @@ export const skills: skillsInterface[] = [
     tools: ["WordPress", "Drupal 10", "WooCommerce", "Elementor Pro", "WPBakery", "ACF", "Custom Post Types"],
   },
   {
+    name: "AI & Automation",
+    description: "AI-assisted development and connected workflows with automation tools.",
+    icon: Workflow,
+    tools: ["N8N", "Zapier", "Codex", "Claude", "Cursor", "V0 Code", "Lovable", "Replit", "Google Workspace"],
+  },
+  {
     name: "Payments & Commerce",
     description: "Payment integrations and complete checkout experiences for online stores.",
     icon: CreditCard,
@@ -59,12 +65,6 @@ export const skills: skillsInterface[] = [
     description: "Leading a team of 5+ developers through collaborative delivery and continuous learning.",
     icon: UsersRound,
     tools: ["Code Reviews", "Mentorship", "Technical Documentation"],
-  },
-  {
-    name: "AI & Automation",
-    description: "AI-assisted development and connected workflows with automation tools.",
-    icon: Workflow,
-    tools: ["N8N", "Zapier", "Codex", "Claude", "Cursor", "V0 Code", "Lovable", "Replit", "Google Workspace"],
   },
 ];
 

@@ -24,6 +24,14 @@ export function AnimatedCursor() {
         target.closest("a, button, [role='button'], input, textarea, select")
       );
       ring.classList.toggle("cursor-ring-active", isInteractive);
+      ring.classList.toggle(
+        "cursor-ring-view",
+        Boolean(target.closest("nav a"))
+      );
+      dot.classList.toggle(
+        "cursor-dot-hidden",
+        Boolean(target.closest("nav a"))
+      );
     };
 
     window.addEventListener("mousemove", moveCursor);
@@ -37,8 +45,8 @@ export function AnimatedCursor() {
 
   return (
     <>
-      <div ref={dotRef} className="cursor-dot" aria-hidden="true" />
-      <div ref={ringRef} className="cursor-ring" aria-hidden="true" />
+      <div ref={dotRef} className="cursor-dot" aria-hidden="true"><span className="cursor-caret">&gt;</span></div>
+      <div ref={ringRef} className="cursor-ring" aria-hidden="true"><span className="cursor-view-label">View</span></div>
     </>
   );
 }

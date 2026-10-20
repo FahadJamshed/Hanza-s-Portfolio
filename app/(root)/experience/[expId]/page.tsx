@@ -77,14 +77,14 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="font-semibold mb-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
               Role Summary
             </h3>
-            <ul className="space-y-3">
+            <ul className="experience-points space-y-4">
               {experience.description.map((desc, idx) => (
                 <li
                   key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
+                  className="text-[0.97rem] leading-7 flex items-start gap-3.5 text-foreground/90"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                   {desc}
@@ -101,14 +101,14 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="font-semibold mb-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
               Key Achievements
             </h3>
-            <ul className="space-y-3">
+            <ul className="experience-points space-y-4">
               {experience.achievements.map((achievement, idx) => (
                 <li
                   key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
+                  className="text-[0.97rem] leading-7 flex items-start gap-3.5 text-foreground/90"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                   {achievement}
@@ -125,7 +125,7 @@ export default async function ExperienceDetailPage({
       content: (
         <AnimatedSection delay={0.3}>
           <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            <h3 className="font-semibold mb-5 text-xs uppercase tracking-[0.14em] text-muted-foreground">
               Technologies & Skills
             </h3>
             <ChipContainer textArr={experience.skills} />
@@ -141,9 +141,9 @@ export default async function ExperienceDetailPage({
 
   return (
     <ClientPageWrapper>
-      <div className="container max-w-4xl mx-auto py-8 px-4">
-        <AnimatedSection className="mb-6">
-          <Button variant="ghost" size="sm" className="mb-4" asChild>
+      <div className="container max-w-5xl mx-auto py-8 md:py-12 px-4">
+        <AnimatedSection className="mb-8">
+          <Button variant="ghost" size="sm" className="group -ml-3 text-muted-foreground hover:text-foreground" asChild>
             <Link href="/experience">
               <Icons.chevronLeft className="mr-2 h-4 w-4" />
               Back to Experience
@@ -152,28 +152,29 @@ export default async function ExperienceDetailPage({
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <Card className="overflow-hidden rounded-lg border bg-background p-2 transition-all duration-300">
-            <CardHeader className="pb-6">
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+          <Card className="experience-detail overflow-hidden rounded-2xl border bg-card transition-all duration-300">
+            <CardHeader className="p-6 sm:p-9 md:p-10">
+              <div className="flex flex-col gap-7">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
+                  <div className="flex items-start gap-5">
                     {experience.logo && (
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg border-2 border-border overflow-hidden bg-white flex-shrink-0">
+                      <div className="w-14 h-14 sm:w-[4.5rem] sm:h-[4.5rem] rounded-xl border border-border/70 overflow-hidden bg-white flex-shrink-0 shadow-sm">
                         <Image
                           src={experience.logo}
                           alt={experience.company}
                           width={80}
                           height={80}
-                          className="w-full h-full object-contain p-2"
+                          className="w-full h-full object-contain p-2.5"
                         />
                       </div>
                     )}
-                    <div className="flex-1 text-center sm:text-left">
-                      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                    <div className="flex-1 min-w-0">
+                      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Professional experience</p>
+                      <h1 className="experience-detail-title max-w-3xl text-2xl sm:text-3xl md:text-[2.65rem] tracking-tight font-semibold mb-4">
                         {experience.position}
                       </h1>
-                      <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
-                        <span className="text-md font-medium text-muted-foreground">
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span className="text-base sm:text-lg font-medium text-foreground">
                           {experience.company}
                         </span>
                         {experience.companyUrl && (
@@ -187,13 +188,13 @@ export default async function ExperienceDetailPage({
                           </a>
                         )}
                       </div>
-                      <p className="text-muted-foreground">
+                      <p className="text-sm text-muted-foreground">
                         {experience.location}
                       </p>
                     </div>
                   </div>
                   <div className="flex justify-center sm:justify-end">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
+                    <span className="inline-flex items-center px-3.5 py-2 rounded-full text-xs font-medium bg-muted/70 text-muted-foreground border border-border/70 whitespace-nowrap">
                       {getDurationText(
                         experience.startDate,
                         experience.endDate
@@ -204,20 +205,12 @@ export default async function ExperienceDetailPage({
               </div>
             </CardHeader>
 
-            <CardContent>
+            <CardContent className="px-6 pb-7 sm:px-9 sm:pb-9 md:px-10 md:pb-10">
               <ResponsiveTabs items={tabItems} defaultValue="summary" />
             </CardContent>
           </Card>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.4} className="flex justify-center mt-8">
-          <Button variant="outline" asChild>
-            <Link href="/experience">
-              <Icons.chevronLeft className="mr-2 h-4 w-4" />
-              View All Experience
-            </Link>
-          </Button>
-        </AnimatedSection>
       </div>
     </ClientPageWrapper>
   );
