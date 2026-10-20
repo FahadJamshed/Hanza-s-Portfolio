@@ -61,19 +61,21 @@ export default function ContactPage() {
             WooCommerce solutions, performance optimization and ongoing
             technical support.
           </p>
-          <a
-            className="inline-block rounded-md bg-primary text-primary-foreground px-5 py-3"
-            href={siteConfig.links.email}
-          >
-            Email Hanza
-          </a>
-          <a
-            className="ml-3 inline-flex w-fit items-center justify-center rounded-md border border-primary px-5 py-3 font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-            href={siteConfig.resume}
-            download
-          >
-            Download my CV
-          </a>
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+            <a
+              className="inline-block rounded-md bg-primary px-5 py-3 text-primary-foreground"
+              href={siteConfig.links.email}
+            >
+              Email Hanza
+            </a>
+            <a
+              className="inline-flex w-fit items-center justify-center rounded-md border border-primary px-5 py-3 font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              href={siteConfig.resume}
+              download
+            >
+              Download my CV
+            </a>
+          </div>
         </div>
       </div>
     </PageContainer>

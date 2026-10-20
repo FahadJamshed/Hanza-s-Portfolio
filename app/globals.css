@@ -3,6 +3,91 @@
 @tailwind utilities;
 
 @layer components {
+  .home-announcement {
+    position: relative;
+    z-index: 51;
+    overflow: hidden;
+    background: linear-gradient(100deg, hsl(var(--primary) / 0.1), hsl(var(--background) / 0.96) 48%, hsl(var(--primary) / 0.08));
+    color: hsl(var(--foreground));
+  }
+
+  .home-announcement-track {
+    display: flex;
+    width: max-content;
+    animation: home-announcement-scroll 38s linear infinite;
+    will-change: transform;
+  }
+
+  .home-announcement:hover .home-announcement-track {
+    animation-play-state: paused;
+  }
+
+  .home-announcement-message {
+    display: flex;
+    min-height: 2.25rem;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .home-announcement-spacer {
+    display: inline-block;
+    width: 4rem;
+    flex: 0 0 4rem;
+  }
+
+  .home-announcement-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    flex: 0 0 auto;
+    border-radius: 9999px;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.12);
+  }
+
+  .home-announcement-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: hsl(var(--primary));
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .home-announcement-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @keyframes home-announcement-scroll {
+    to { transform: translate3d(-50%, 0, 0); }
+  }
+
+  @media (max-width: 640px) {
+    .home-announcement-message {
+      min-height: 2.15rem;
+      gap: 0.65rem;
+      font-size: 0.66rem;
+    }
+
+    .home-announcement-spacer {
+      width: 2rem;
+      flex-basis: 2rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-announcement-track { animation: none; }
+    .home-announcement-message[aria-hidden="true"] { display: none; }
+    .home-announcement-message { justify-content: center; white-space: normal; text-align: center; }
+    .home-announcement-spacer { display: none; }
+  }
+
   .floating-hire-button {
     position: fixed;
     right: 1.25rem;
@@ -283,6 +368,7 @@
     left: 0;
     top: 0;
     z-index: 9999;
+    transition: none;
   }
 
   .cursor-dot {

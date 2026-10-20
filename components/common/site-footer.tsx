@@ -10,7 +10,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
     <footer className={cn(className)}>
       <div className="container flex flex-col items-center justify-center gap-3 mt-10 py-10 md:h-28">
-        <div className="flex items-center justify-center gap-8">
+        <div className="flex items-center justify-center gap-2">
           {SocialLinks.map((item, ind) => (
             <CustomTooltip icon={item.icon} text={item.username} key={ind}>
               <Link
