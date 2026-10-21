@@ -19,7 +19,7 @@
   .home-announcement-track {
     display: flex;
     width: max-content;
-    animation: home-announcement-scroll 38s linear infinite;
+    animation: home-announcement-scroll 60s linear infinite;
     will-change: transform;
   }
 
@@ -463,7 +463,14 @@
     opacity: 0;
   }
 
-  @media (hover: hover) and (pointer: fine) {
+  @media (max-width: 767px) {
+    .cursor-dot,
+    .cursor-ring {
+      display: none !important;
+    }
+  }
+
+  @media (min-width: 768px) {
     .cursor-dot,
     .cursor-ring {
       display: block;
