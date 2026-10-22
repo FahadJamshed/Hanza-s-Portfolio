@@ -76,6 +76,7 @@ export function ContactForm() {
         storeModal.onOpen({
           title: "Message not sent",
           description: result?.error || "Please try again in a moment.",
+          icon: Icons.warning,
         });
       }
     } catch (err) {
@@ -83,6 +84,7 @@ export function ContactForm() {
       storeModal.onOpen({
         title: "Message not sent",
         description: "Please check your connection and try again.",
+        icon: Icons.warning,
       });
     }
   }

@@ -374,6 +374,7 @@
     top: 0;
     z-index: 9999;
     transition: none;
+    will-change: transform;
   }
 
   .cursor-dot {
@@ -407,11 +408,11 @@
     margin-left: -15px;
     margin-top: -15px;
     transition:
-      width 90ms ease,
-      height 90ms ease,
-      margin 90ms ease,
-      background-color 90ms ease,
-      border-color 90ms ease;
+      width 60ms ease,
+      height 60ms ease,
+      margin 60ms ease,
+      background-color 60ms ease,
+      border-color 60ms ease;
   }
 
   .cursor-ring-active {

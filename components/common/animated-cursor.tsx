@@ -12,10 +12,21 @@ export function AnimatedCursor() {
 
     if (!dot || !ring) return;
 
+    let pointerX = 0;
+    let pointerY = 0;
+    let animationFrame = 0;
+
     const moveCursor = (event: MouseEvent) => {
-      const transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
-      dot.style.transform = transform;
-      ring.style.transform = transform;
+      pointerX = event.clientX;
+      pointerY = event.clientY;
+
+      if (animationFrame) return;
+      animationFrame = window.requestAnimationFrame(() => {
+        const transform = `translate3d(${pointerX}px, ${pointerY}px, 0)`;
+        dot.style.transform = transform;
+        ring.style.transform = transform;
+        animationFrame = 0;
+      });
     };
 
     const updateInteractiveState = (event: MouseEvent) => {
@@ -40,6 +51,7 @@ export function AnimatedCursor() {
     return () => {
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mouseover", updateInteractiveState);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
     };
   }, []);
 
