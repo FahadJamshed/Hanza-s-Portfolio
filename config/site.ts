@@ -8,7 +8,7 @@ export const siteConfig = {
   phone: "+92 308 3013301",
   location: "Lahore, Punjab, Pakistan",
   jobTitle: "Senior Front-End Developer | WordPress Specialist",
-  resume: "/resume/Hanza_Jamshed_Resume_2026.pdf",
+  resume: "/resume/Hanza_Jamshed_WordPress_Developer_Resume_2026.pdf",
   links: {
     linkedin: "https://www.linkedin.com/in/hanzajamshed6188",
     fiverr: "https://www.fiverr.com/hanzajamshed/develop-awesome-websites-in-wordpress",
