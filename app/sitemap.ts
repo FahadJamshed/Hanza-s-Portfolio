@@ -11,6 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/skills",
     "/education",
     "/contact",
+    "/blogs",
+    "/privacy-policy",
     "/resume",
     ...Projects.map((p) => `/projects/${p.id}`),
     ...experiences.map((e) => `/experience/${e.id}`),
