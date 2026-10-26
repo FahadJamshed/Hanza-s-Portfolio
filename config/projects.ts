@@ -134,6 +134,7 @@ const allProjects: ProjectInterface[] = [
     deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/evox.jpg",
     imageKind: "illustration",
+    websiteLink: "https://www.evvox.ai/",
     companyName: "Evox",
     type: "Professional",
     category: ["Web Dev", "Frontend"],
@@ -393,5 +394,9 @@ const projectPriority = (id: string) => {
 
 export const Projects = allProjects
   .filter((project) => !project.hidden)
-  .sort((a, b) => projectPriority(a.id) - projectPriority(b.id));
+  .sort((a, b) => {
+    const priorityDifference = projectPriority(a.id) - projectPriority(b.id);
+    if (priorityDifference !== 0) return priorityDifference;
+    return Number(!a.websiteLink) - Number(!b.websiteLink);
+  });
 export const featuredProjects = Projects.slice(0, 3);
