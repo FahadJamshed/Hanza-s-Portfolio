@@ -21,6 +21,7 @@ Additional website previews matched by project name and context:
 - CLC Online Learning: https://clconlinelearning.co.uk/
 - BSS School (Beaconhouse): https://www.beaconhouse.net/
 - BSS LAP: https://lap.beaconhouse.net/
+- Prickly Bear: https://pricklybear.io/ (homepage screenshot captured 2026-10-26)
 
 The user authorized related illustrative images for projects without available URLs. These are explicitly labelled “Illustrative image” on cards and detail pages; no speculative website links were added. Images are downloaded locally from Unsplash:
 
@@ -29,6 +30,13 @@ The user authorized related illustrative images for projects without available U
 - Impresario Studio: https://images.unsplash.com/photo-1598488035139-bdbb2231ce04
 - NeuMed: https://images.unsplash.com/photo-1505751172876-fa1923c5c528
 - Teeth & Smile: https://images.unsplash.com/photo-1606811971618-4486d14f3f99
+
+Additional projects without available website previews use locally stored illustrative stock photos from Unsplash:
+
+- Khan Baba: https://images.unsplash.com/photo-1565557623262-b51c2513a641
+- Manchester Corporate Travel: https://images.unsplash.com/photo-1492144534655-ae79c964c9d7
+- OpenTPN: https://images.unsplash.com/photo-1498050108023-c5249f4df085
+- Beaconhouse ICON: https://images.unsplash.com/photo-1501386761578-eac5c94b800a
 
 Project previews fall back to an explicitly labelled graphic cover if an image fails to load.
 

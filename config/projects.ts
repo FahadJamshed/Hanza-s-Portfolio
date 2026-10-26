@@ -34,6 +34,8 @@ const allProjects: ProjectInterface[] = [
   {
     id: "khan-baba",
     deliveredVia: "JinnByte",
+    companyLogoImg: "/projects/previews/food-stock.jpg",
+    imageKind: "illustration",
     companyName: "Khan Baba",
     type: "Professional",
     category: ["Web Dev", "Frontend"],
@@ -151,7 +153,7 @@ const allProjects: ProjectInterface[] = [
     deliveredVia: "JinnByte",
     companyLogoImg: "/projects/hanza/bss-school.jpg",
     imageKind: "website",
-    websiteLink: "https://www.beaconhouse.net",
+    websiteLink: "https://bssweb.kinsta.cloud/",
     companyName: "BSS School",
     type: "Professional",
     category: ["Web Dev", "Frontend"],
@@ -304,6 +306,8 @@ const allProjects: ProjectInterface[] = [
   },
   {
     id: "manchester-corporate-travel",
+    companyLogoImg: "/projects/previews/manchester-corporate-travel-stock.jpg",
+    imageKind: "illustration",
     companyName: "Manchester Corporate Travel",
     type: "Professional",
     category: ["Web Dev", "Frontend"],
@@ -315,6 +319,63 @@ const allProjects: ProjectInterface[] = [
       paragraphs: [
         "A corporate chauffeur travel website built to introduce Manchester Corporate Travel’s airport, business, event and hourly chauffeur services.",
         "The site brings together fleet information, travel service details and booking calls to action, helping visitors explore vehicle options and arrange a journey.",
+      ],
+      bullets: [],
+    },
+    pagesInfoArr: [],
+  },
+  {
+    id: "opentpn",
+    companyLogoImg: "/projects/previews/opentpn-stock.jpg",
+    imageKind: "illustration",
+    companyName: "OpenTPN",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "Website project for OpenTPN, with a public web presence for its services and information.",
+    websiteLink: "https://opentpn.com/",
+    techStack: ["WordPress"],
+    descriptionDetails: {
+      paragraphs: [
+        "Website project for OpenTPN, providing a public web presence for its services and information.",
+      ],
+      bullets: [],
+    },
+    pagesInfoArr: [],
+  },
+  {
+    id: "beaconhouse-icon",
+    companyLogoImg: "/projects/previews/beaconhouse-icon-stock.jpg",
+    imageKind: "illustration",
+    companyName: "Beaconhouse ICON",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "Website project for Beaconhouse ICON, presenting its education program and information.",
+    websiteLink: "https://beaconhouseicon.com/",
+    techStack: ["WordPress"],
+    descriptionDetails: {
+      paragraphs: [
+        "Website project for Beaconhouse ICON, presenting its education program and information.",
+      ],
+      bullets: [],
+    },
+    pagesInfoArr: [],
+  },
+  {
+    id: "prickly-bear",
+    companyLogoImg: "/projects/previews/prickly-bear-site-preview.png",
+    imageKind: "website",
+    companyName: "Prickly Bear",
+    type: "Professional",
+    category: ["Web Dev", "Frontend"],
+    shortDescription:
+      "Website project for Prickly Bear, presenting its brand, products and information online.",
+    websiteLink: "https://pricklybear.io/",
+    techStack: ["WordPress"],
+    descriptionDetails: {
+      paragraphs: [
+        "Website project for Prickly Bear, presenting its brand, products and information online.",
       ],
       bullets: [],
     },
