@@ -21,6 +21,7 @@ import { featuredProjects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { featuredSkills } from "@/config/skills";
 import { cn } from "@/lib/utils";
+import WaterRipple from "@/components/WaterRipple";
 
 export const metadata: Metadata = {
   title: {
@@ -57,9 +58,10 @@ export default function IndexPage() {
 
       <section
         id="home"
-        className="mb-0 flex min-h-[calc(100svh-5rem)] items-center py-8 sm:py-10 md:py-16"
+        className="relative isolate mb-0 flex min-h-[calc(100svh-5rem)] items-center overflow-hidden py-8 sm:py-10 md:py-16"
       >
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 px-4 text-center sm:px-6">
+        <WaterRipple />
+        <div className="container relative z-[1] flex max-w-[64rem] flex-col items-center gap-4 px-4 text-center sm:px-6">
           <Image
             src={siteConfig.portrait}
             height={800}
